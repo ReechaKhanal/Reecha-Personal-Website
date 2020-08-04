@@ -1,32 +1,15 @@
-// usage
-// node server.js
-
-process.title = 'node-website-template';
-
-// core module
-var http = require('http');
-
-// npm packages
-var ErrorPage = require('error-page');
-var Templar = require('templar');
-var router = require('routes')();
-
-var environment = process.env.NODE_ENV || 'development';
-var config = require('./config/' + environment + '.js');
-var templarOptions = { engine: config.engine, folder: config.templates };
-
-Templar.loadFolder(config.templates);
-
-router.addRoute('/*', require('./routes/static.js'));
-router.addRoute('/', require('./routes/home.js'));
-
-http.createServer(function (req, res) {
-  res.error = ErrorPage(req, res, {
-    404: 'not found!'
+const http = require('http');
+const express = require('express');
+const path = require('path');
+const app = express();
+app.use(express.json());
+app.use(express.static("express"));
+// default URL for website
+app.use('/', function(req,res){
+    res.sendFile(path.join(__dirname+'/express/index.html'));
+    //__dirname : It will resolve to your project folder.
   });
-
-  res.template = Templar(req, res, templarOptions);
-  router.match(req.url).fn(req, res, config);
-}).listen(config.port);
-
-console.log('Server Listening - http://localhost:' + config.port + '. ' + environment + ' environment');
+const server = http.createServer(app);
+const port = 3000;
+server.listen(port);
+console.debug('Server listening on port ' + port);
