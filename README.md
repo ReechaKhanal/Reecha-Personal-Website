@@ -1,190 +1,141 @@
-# [Material Kit Ghost](https://www.creative-tim.com/product/material-kit-ghost) [![Tweet](https://img.shields.io/twitter/url/http/shields.io.svg?style=social&logo=twitter)](https://twitter.com/intent/tweet?text=Material%20Kit%20Ghost,%20a%20cool%20Material%20Design%20Theme%20built%20for%20Ghost%20by%20Creative%20Tim.%20https://material-kit-ghost.creative-tim.com/&via=CreativeTim%20%23argon%20%23designsystem%20%23developers)
+# Website/Web Service template in Node.js
 
+![puzzle](http://i.imgur.com/8orBBZu.png)
 
- ![version](https://img.shields.io/badge/version-1.0.0-blue.svg)  [![GitHub issues open](https://img.shields.io/github/issues/creativetimofficial/argon-react-native.svg?style=flat)](https://github.com/creativetimofficial/argon-react-native/issues?q=is%3Aopen+is%3Aissue) 
-[![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://github.com/creativetimofficial/material-kit-ghost/blob/master/LICENSE) ![GitHub closed issues](https://img.shields.io/github/issues-closed-raw/creativetimofficial/material-kit-ghost)
+![codeship](https://www.codeship.io/projects/87c9c610-a174-0131-48e7-2eb91d28af94/status)
 
+**Table of Contents**
 
-![Product Gif](https://raw.githubusercontent.com/creativetimofficial/public-assets/master/material-kit-ghost/opt_mk_ghost_thumbnail.jpg)
+* [Why not express?](#why-not-express)
+* [Design Philosophy](#design-philosophy)
+* [Folders structure](#folders-structure)
+* [Modules being used](#modules-being-used)
+* [Run](#run)
+* [Test](#test)
+* [Deploy](#deploy)
+* [Misc](#misc)
 
+I wrote this template to help me create websites and Web Services with Node. It uses vanilla http server with a few small packages that most websites need. Stuff like templates, router and serving static files. I borrowed a lot from isaacs' [npm website](https://github.com/isaacs/npm-www).
 
-**Material Kit Ghost** is a fully coded Ghost theme inspired by our own Material Design line of themes. We have created what we think is the best free Material Design theme for Ghost.
+Sites that follow this approach: (pull requests for more examples are welcome)
 
-Start Your Development With A Badass Material Kit Ghost Theme inspired by Material Design. If you like Google's Material Design, you will love this kit! It features a huge number of components built to fit together and look amazing. 
+* https://github.com/isaacs/npm-www
+* https://github.com/Raynos/process-dashboard
+* https://github.com/substack/substack.net
 
-**FULLY CODED COMPONENTS**
+## Why not express
 
-Material Kit Ghost uses a simple templating language called [Handlebars](http://handlebarsjs.com/) for its themes. We recommend going over at https://ghost.org/docs/api/handlebars-themes/ for more information regarding the theme and how to develop a Ghost theme.
+When newcomers ask about writing a website or a Web Service they are usualy being told to use express. The problem with express is it uses  middleware/Connect. middleware was a hack invented while solving a problem Node doesn't have. The problem that WSGI solves, which is creating a common interface for writing websites or frameworks that are used by web servers (such as Gunicorn in python or Thin in Ruby). Node doesn't even have those web servers since it comes with a built-in server as part of it's http library.  
 
+middleware forces a pre-declared stack of (req,res,next) functions on top of your routes. It's mostly just not a very useful approach for handling the kinds of things you need a webserver to do - serving static files, parsing POST data, parsing cookies, routing, auth. All can be handled quite nicely just by explicitly passing req and res around as necessary or by returning a stream and piping that to res as the case may warrant.  
 
-**PIXEL PERFECT DESIGN**
+Also, writing a middleware means you create a module that doesn't work with the Node eco-system. It only works with express/Connect.
 
-The screens are carefully created and inspired by our Material Kit line of design. You can never go wrong with the amount of attention we’re willing to invest into crafting the most accurate Material Design theme for Ghost. 
+## Design Philosophy
 
-View all pages [here](https://material-kit-ghost.creative-tim.com/). 
+(inspired by [isaacs](https://github.com/isaacs/npm-www))
 
-**STYLE GUIDE** 
+* **No frameworks** - Everything is done using small, simple, standalone modules that work with vanilla Node.js http servers. Also no test frameworks or control flow library.
+* **Unceremonious MVC** - No big MVC class heirarchy. Just have the route handler get some data, then hand it off to a template.  Simpler is better.
+* **Ridiculous speed** - This site should be surprisingly fast.  Towards that end, things are cached and served from memory whenever possible, and ETagged for browser-cacheablility.
+* **Small Modules** - No single JavaScript file should be more than about 200 lines.  If it is, then that's a sign that it should be split up.  
+* **DRY Dependencies** - If multiple different routes all have to keep doing the same thing, then they should either be the same route, or the repeated bits belong in a dependency.
+* **No lib folder** - If you would put it in `lib/`, then it belongs in a separate module.
 
-Material Kit Ghost comes packed with a large number of features. Putting together a page has never been easier. From HTML insertion to bookmarks and responsive styling, you can easily create and built your blog posts. We have created multiple options for you to put together and customise into pixel perfect pages. 
-
-View all sections [here](https://material-kit-ghost.creative-tim.com/style-guide/).
-
-
-Let us know your thoughts below. And good luck with development!
-
-
-## Table of Contents
-
-* [Versions](#versions) 
-* [Quick Start](#quick-start)
-* [Documentation](#documentation)
-* [File Structure](#file-structure)
-* [Browser Support](#browser-support)
-* [Resources](#resources)
-* [Reporting Issues](#reporting-issues)
-* [Technical Support or Questions](#technical-support-or-questions)
-* [Licensing](#licensing)
-* [Useful Links](#useful-links)
-
-## Versions
-
-[<img src="https://raw.githubusercontent.com/creativetimofficial/public-assets/master/logos/icon_ghost.png" width="60" height="60"/>](https://www.creative-tim.com/product/material-kit-ghost?ref=mkg-github-readme)[<img src="https://github.com/creativetimofficial/public-assets/blob/master/logos/html-logo.jpg?raw=true" width="60" height="60" />](https://www.creative-tim.com/product/material-kit?ref=mkg-github-readme)[<img src="https://github.com/creativetimofficial/public-assets/blob/master/logos/vue-logo.jpg?raw=true" width="60" height="60" />](https://www.creative-tim.com/product/vue-material-kit?ref=mkg-github-readme)[<img src="https://github.com/creativetimofficial/public-assets/blob/master/logos/react-logo.jpg?raw=true" width="60" height="60" />](https://www.creative-tim.com/product/material-kit-react?ref=mkg-github-readme)[<img src="https://github.com/creativetimofficial/public-assets/blob/master/logos/react-native-logo.jpg?raw=true" width="60" height="60" />](https://www.creative-tim.com/product/material-kit-react-native?ref=mkg-github-readme)[<img src="https://github.com/creativetimofficial/public-assets/blob/master/logos/figma-logo.jpg?raw=true" width="60" height="60" />](https://demos.creative-tim.com/material-kit-figma/presentation.html?ref=mkg-github-readme)[<img src="https://github.com/creativetimofficial/public-assets/blob/master/logos/wordpress-logo.jpg?raw=true" width="60" height="60" />](https://themeisle.com/themes/hestia/?ref=creativetim)
-
-| Ghost | React | Vue  |
-| --- | --- | ---  |
-| [![Material Kit Ghost](https://s3.amazonaws.com/creativetim_bucket/products/263/thumb/opt_mk_ghost_thumbnail.jpg?1586364531)](https://www.creative-tim.com/product/material-kit-ghost?ref=mkg-github-readme)  | [![Material Kit  React](https://github.com/creativetimofficial/public-assets/blob/master/material-kit-react/material-kit-react.jpeg?raw=true)](https://www.creative-tim.com/product/material-kit-react?ref=mkg-github-readme)  | [![Vue Material Kit](https://github.com/creativetimofficial/public-assets/blob/master/vue-material-kit/vue-material-kit.jpeg?raw=true)](https://www.creative-tim.com/product/vue-material-kit?ref=mkg-github-readme)
-
-| React Native | HTML | Figma |
-| ---  | --- | --- |
-| [![Material Kit React Native](https://github.com/creativetimofficial/public-assets/blob/master/material-kit-react-native/opt_mkrn_thumbnail.jpg?raw=true)](https://www.creative-tim.com/product/material-kit-react-native?ref=mkg-github-readme) | [![Material Kit  HTML](https://s3.amazonaws.com/creativetim_bucket/products/38/original/opt_mk_thumbnail.jpg)](https://www.creative-tim.com/product/material-kit?ref=mkg-github-readme) | [![Material Kit Figma](https://github.com/creativetimofficial/public-assets/blob/master/material-kit-figma/material-kit-figma.jpg?raw=true)](https://demos.creative-tim.com/material-kit-figma/presentation.html?ref=mkg-github-readme)
-
-## Quick start
-- Download from [Creative Tim](https://www.creative-tim.com/product/material-kit-ghost?ref=mkg-github-readme)
-- Go to you website dashboard 
-- Select "Design" under "Settings"
-- Scroll down and hit 'Upload a theme'
-- Drag and drop our .zip file 
-- You're set and ready to go!
-
-## Documentation
-The documentation for the Material Kit Ghost is hosted on our [live preview](https://material-kit-ghost.creative-tim.com/documentation?ref=mkg-github-readme).
-
-
-## File Structure
-Within the download you'll find the following directories and files:
+## Folders structure
 
 ```
-material-kit-ghost/
-|-- CHANGELOG.md
-|-- LICENSE
-|-- README.md
-|-- assets
-|   |-- built
-|   |-- css
-|   |-- js
-|   `-- scss
-|-- author.hbs
-|-- default.hbs
-|-- error-404.hbs
-|-- error.hbs
-|-- home.hbs
-|-- index.hbs
-|-- package.json
-|-- page-authors.hbs
-|-- page-tags.hbs
-|-- page-typography.hbs
-|-- page.hbs
-|-- partials
-|   |-- byline-multiple.hbs
-|   |-- byline-single.hbs
-|   |-- header.hbs
-|   |-- icons
-|   |   |-- avatar.hbs
-|   |   |-- facebook.hbs
-|   |   |-- ghost-logo.hbs
-|   |   |-- infinity.hbs
-|   |   |-- location.hbs
-|   |   |-- point.hbs
-|   |   |-- rss.hbs
-|   |   |-- twitter.hbs
-|   |   `-- website.hbs
-|   |-- post-card.hbs
-|   `-- site-nav.hbs
-|-- post.hbs
-|-- tag.hbs
-`-- yarn.lock
+server.js               # the starting point of our server
 
+routes/                 # each request will ended up in one of those
+  index.js              # request for '/'
+  static.js             # request for static files
+
+templates/              # server-side templates
+  index.ejs             # homepage - showing list of users
+  contact-partial.ejs   # each contact
+
+config/                 # single entry point for dependencies:
+  development.js        # hostnames, dbs, external api etc
+  prod.js
+  test.js
+
+db/                     # db related stuff
+  db.js                 # access to a real db (just a json file for this example)
+  mock-db.js            # access to mocked db. used for unit tests
+  contacts.json         # our DB
+
+test                    # unit tests with tape
+  client                # client-side tests with the help of browserify
+    saveUser.js
+  server
+    index.js
+
+bin/
+  deploy               # deploy script
+  restart              # post-deploy script
+  restart-dev          # stylus and browserify and restart server on file change
+
+.jshintrc              # jshist options
+deploy.conf            # deployment config file
 ```
 
+## Modules being used
 
-## Browser Support
+* [routes](https://github.com/aaronblohowiak/routes.js) - routing
+* [templar](https://github.com/isaacs/templar) - agnostic templating
+* [ejs](https://github.com/visionmedia/ejs) - js templates
+* [st](https://github.com/isaacs/st) - serving static files
+* [error-page](https://github.com/isaacs/error-page) - send error pages
+* [browserify](https://github.com/substack/node-browserify) - to use a node-style require() to organize your browser code
+* [node-dev](https://github.com/fgnass/node-dev) - restart the server on server files change
+* [tape](https://github.com/substack/tape) - browser and server unit tests
 
-At present, we officially aim to support the last two versions of the following browsers:
+### Alternative Modules
 
-<img src="https://github.com/creativetimofficial/public-assets/blob/master/logos/chrome-logo.png?raw=true" width="64" height="64"> <img src="https://raw.githubusercontent.com/creativetimofficial/public-assets/master/logos/firefox-logo.png" width="64" height="64"> <img src="https://raw.githubusercontent.com/creativetimofficial/public-assets/master/logos/edge-logo.png" width="64" height="64"> <img src="https://raw.githubusercontent.com/creativetimofficial/public-assets/master/logos/safari-logo.png" width="64" height="64"> <img src="https://raw.githubusercontent.com/creativetimofficial/public-assets/master/logos/opera-logo.png" width="64" height="64">
+(Please let me know of any helpful modules that works with vanilla http server)
 
+* [jade](https://github.com/visionmedia/jade) instead of ejs
+* [ecstatic](https://github.com/jesusabdullah/node-ecstatic) instead of st
 
-## Resources
-- Demo: <https://material-kit-ghost.creative-tim.com/>
-- Download Page: <https://www.creative-tim.com/product/material-kit-ghost>
-- Documentation: <https://material-kit-ghost.creative-tim.com/documentation>
-- License Agreement: <https://www.creative-tim.com/license>
-- Support: <https://www.creative-tim.com/contact-us>
-- Issues: [Github Issues Page](https://github.com/creativetimofficial/material-kit-ghost/issues)
-- [Material Kit](https://www.creative-tim.com/product/material-kit?ref=mkg-github-readme) - For Front End Development
-- **Dashboards:**
+## Run
 
-| HTML | React | Vue  | Angular |
-| --- | --- | ---  | ---  |
-| [![Material Dashboard  HTML](https://github.com/creativetimofficial/public-assets/blob/master/material-dashboard-html/material-dashboard.jpeg?raw=true)](https://www.creative-tim.com/product/material-dashboard?ref=mkg-github-readme) | [![Material Dashboard  React](https://github.com/creativetimofficial/public-assets/blob/master/material-dashboard-react/material-dashboard-react.jpeg?raw=true)](https://www.creative-tim.com/product/material-dashboard-react?ref=mkg-github-readme) | [![Vue Material Dashboard](https://github.com/creativetimofficial/public-assets/blob/master/vue-material-dashboard/vue-material-dashboard.jpeg?raw=true)](https://www.creative-tim.com/product/vue-material-dashboard?ref=mkg-github-readme)  | [![ Material Dashboard Angular](https://github.com/creativetimofficial/public-assets/blob/master/material-dashboard-angular/material-dashboard-angular.jpg?raw=true)](https://www.creative-tim.com/product/material-dashboard-angular2?ref=mkg-github-readme)
+```
+npm install
+npm run watchify &               # build browserify when a js client-side file changes
+npm start                        # run server.js with node-dev. it will restart the app when a server side file changes
+```
+http://localhost:3000
 
-| HTML Dark | Vuetify  |
-| --- | --- |
-| [![Material Dashboard Dark](https://github.com/creativetimofficial/public-assets/blob/master/material-dashboard-dark/material-dashboard-dark.jpg?raw=true)](https://www.creative-tim.com/product/material-dashboard-dark?ref=mkg-github-readme) | [![Material Dashboard Vuetify](https://github.com/creativetimofficial/public-assets/blob/master/material-dashboard-vuetify/material-dashboard-vuetify.jpg?raw=true)](https://www.creative-tim.com/product/vuetify-material-dashboard?ref=mkg-github-readme)
+## Compile stylus to css
 
+`npm run style`
 
-## Reporting Issues
+## Test
 
-We use GitHub Issues as the official bug tracker for the Material Kit Ghost. Here are some advices for our users that want to report an issue:
+I use [tape](https://github.com/substack/tape), substack's minimalist test library. Server and client side code.  I wrote about it [here](https://github.com/oren/oren.github.com/blob/master/posts/tape/tape.md) if you havn't heard about it.
 
-1. Make sure that you are using the latest version of the Material Kit. Check the CHANGELOG from your dashboard on our [website](https://www.creative-tim.com/?ref=mkg-github-readme).
-2. Providing us reproducible steps for the issue will shorten the time it takes for it to be fixed.
-3. Some issues may be browser specific, so specifying in what browser you encountered the issue might help.
+    (if your tests are hitting the server you need to run it first)
+    npm test                      # use tape binary to run all tests
 
+or
 
-### Technical Support or Questions
+    node test/server/index.js      # run a single test
 
-If you have questions or need help integrating the product please [contact us](https://www.creative-tim.com/contact-us?ref=mkg-github-readme) instead of opening an issue.
+## Deploy
 
+I use [deploy](https://github.com/visionmedia/deploy), a 400 lines bash script written by TJ Holowaychuk. [Here](https://github.com/oren/oren.github.com/blob/master/posts/deploy.md) is my quick blog post about it.
 
-## Licensing
+    bin/deploy qa         # deploy to qa host
+    bin/deploy prod       # deploy to prod host
 
-- Copyright 2020 [Creative Tim](https://www.creative-tim.com/?ref=mkg-github-readme)
+## Misc
 
-- Licensed under [MIT](https://github.com/creativetimofficial/material-kit-ghost/blob/master/LICENSE.md)
+### Code Guidelines
 
+* Node Style Guide - http://nodeguide.com/style.html
+* Use Jshint
+* Single entry point for dependencies (easy to mock when testing)
 
-## Useful Links
-
-- [Tutorials](https://www.youtube.com/channel/UCVyTG4sCw-rOvB9oHkzZD1w)
-- [Affiliate Program](https://www.creative-tim.com/affiliates/new?ref=mkg-github-readme) (earn money)
-- [Blog Creative Tim](http://blog.creative-tim.com/)
-- [Free Products](https://www.creative-tim.com/bootstrap-themes/free?ref=mkg-github-readme) from Creative Tim
-- [Premium Products](https://www.creative-tim.com/bootstrap-themes/premium?ref=mkg-github-readme) from Creative Tim
-- [React Products](https://www.creative-tim.com/bootstrap-themes/react-themes?ref=mkg-github-readme) from Creative Tim
-- [Angular Products](https://www.creative-tim.com/bootstrap-themes/angular-themes?ref=mkg-github-readme) from Creative Tim
-- [VueJS Products](https://www.creative-tim.com/bootstrap-themes/vuejs-themes?ref=mkg-github-readme) from Creative Tim
-- [More products](https://www.creative-tim.com/bootstrap-themes?ref=mkg-github-readme) from Creative Tim
-- Check our Bundles [here](https://www.creative-tim.com/bundles?ref=mkg-github-readme)
-
-
-### Social Media
-
-Twitter: <https://twitter.com/CreativeTim>
-
-Facebook: <https://www.facebook.com/CreativeTim>
-
-Dribbble: <https://dribbble.com/creativetim>
-
-Instagram: <https://www.instagram.com/CreativeTimOfficial>
+Contributions welcome!
 
