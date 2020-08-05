@@ -1,125 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
-<title>Reecha Khanal</title>
-<meta charset="UTF-8">
-<head>
-    <link rel="stylesheet" href = "main.css">
-</head>
-<body>
-
-<!-- Top Navigation Bar -->
-<div class="top-navigation-bar">
-  <div class="top-navigation-card">
-    <li><a class="w3-bar-item w3-button w3-padding-large w3-hide-medium w3-hide-large w3-right" href="javascript:void(0)" onclick="myFunction()" title="Toggle Navigation Menu"><i class="fa fa-bars"></i></a>
-    <li><a href="#overview" class="navigation_bar_item">OVERVIEW</a></li>
-    <li><a href="#education" class="navigation_bar_item">EDUCATION</a></li>
-    <li><a href="#experience" class="navigation_bar_item">EXPERIENCE</a></li>
-    <li><a href="#contact" class="navigation_bar_item">CONTACT</a></li>
-  </div>
-</div>
-
-<!-- Navbar on small screens -->
-<div id="navDemo" class="w3-bar-block w3-black w3-hide w3-hide-large w3-hide-medium w3-top" style="margin-top:46px">
-  <a href="#education" class="navigation_bar_item" onclick="myFunction()">EDUCATION</a>
-  <a href="#experience" class="navigation_bar_item" onclick="myFunction()">PROFESSIONAL EXPERIENCE</a>
-  <a href="#contact" class="navigation_bar_item" onclick="myFunction()">CONTACT</a>
-</div>
-
-<!-- Page content -->
-<div class="page-content" style="max-width:2000px;margin-top:46px">
-
- <!-- Initial Starting Picture Section-->
-  <div class="mySlides w3-display-container w3-center">
-    <div class = "w3-black">
-      <h2 class ="w3-wide">Welcome!</h2>
-      <p style = "color: black;"> <em>Hey there, you have landed the right place if you are looking forward to know me more.</em></p>           
-    </div>
-  </div>
-
-  <!-- The Education Section -->
-  <div class="w3-container w3-content w3-center w3-padding-64" style="max-width:800px" id="band">
-    <h2 class="w3-wide">Education</h2>
+    <title>Reecha Khanal</title>
+    <meta charset="UTF-8">
     
-    <p class="w3-opacity"><p>Bachelors of science|University of New Orleans</p>
-                          <p>Major: Computer Science</p>
-                          <p>Minor: Electrical Engineering</p>
-                          <p>Cumulative GPA: 3.8</p>
-                          <p>Anticipated Graduation: May 2019</p>
-    </p>
-  </div>
+    <head>
+        <link rel="stylesheet" href = "main.css">
+    </head>
 
-  <!-- The Experience Section -->
-  <div class="w3-black" id="tour">
-    <div class="w3-container w3-content w3-padding-64" style="max-width:800px">
-      <h2 class="w3-wide w3-center">EXPERIENCE</h2>
-      <ul class="w3-ul w3-border w3-white w3-text-grey">
-        <li class="w3-padding"><strong>Undergraduate Machine Learning and Software Development Intern Dec 2017 to present</strong>
-          <br><em> I work for the <a href="https://biomall.cs.uno.edu/people/?fbclid=IwAR14pAIbFokHU4LJe0bWCQAauhG-RmjGfJqCHBfY3stFb4lPcUTOciQz22M#" target="_blank">Bioinformatics and Machine Learning lab</a> as an undergraduate research assistant and software developer.</em>
-        </li>
-        <li class="w3-padding"><strong>Undergraduate Software Engineering Intern Jan 2017 to july 2017
-        </strong>
-          <br><em> I worked for the <a href="http://cs.uno.edu/~zibran/Students/index.html" target="_blank">Software Development Lab</a> as an undergraduate software enginner.</em>
-        </li>
-        <li class="w3-padding"><strong>Building Manager may 2016 to june 2018</strong>
-          <br><em> I worked as a building and scheduling manager for the <a href="http://new.uno.edu/uc"target="_blank">university center</a> building at the University of New Orleans.</em>
-        </li>
-      </ul>
-      </div>
-  </div>
-
-  <!-- The Contact Section -->
-  <div class="w3-container w3-content w3-padding-64" style="max-width:800px" id="contact">
-    <h2 class="w3-wide w3-center">CONTACT</h2>
-    <div class="w3-row w3-padding-32">
-      <div class="w3-col m6 w3-large w3-margin-bottom">
-        <i class="fa fa-map-marker" style="width:30px"></i> New Orleans, Louisiana, US<br>
-        <i class="fa fa-envelope" style="width:30px"> </i> Email: reecha.khanal@gmail.com<br>
-      </div>
-    </div>
-  </div>
-  
-<!-- End Page Content -->
-</div>
-
-<!-- Footer -->
-<footer class="w3-container w3-padding-64 w3-center w3-opacity w3-light-grey w3-xlarge">
-  <a href="https://www.linkedin.com/in/reecha-khanal-36a610128/" target="_blank"><i class="fa fa-linkedin w3-hover-opacity"></i>
-</footer>
-
-<script>
-// Automatic Slideshow - change image every 4 seconds
-var myIndex = 0;
-carousel();
-
-function carousel() {
-  var i;
-  var x = document.getElementsByClassName("mySlides");
-  for (i = 0; i < x.length; i++) {
-    x[i].style.display = "none";  
-  }
-  myIndex++;
-  if (myIndex > x.length) {myIndex = 1}    
-  x[myIndex-1].style.display = "block";  
-  setTimeout(carousel, 4000);    
-}
-
-// Used to toggle the menu on small screens when clicking on the menu button
-function myFunction() {
-  var x = document.getElementById("navDemo");
-  if (x.className.indexOf("w3-show") == -1) {
-    x.className += " w3-show";
-  } else { 
-    x.className = x.className.replace(" w3-show", "");
-  }
-}
-
-// When the user clicks anywhere outside of the modal, close it
-var modal = document.getElementById('ticketModal');
-window.onclick = function(event) {
-  if (event.target == modal) {
-    modal.style.display = "none";
-  }
-}
-</script>
-</body>
+    <body>
+        <!-- Top Navigation Bar -->
+        <div class="top-navigation-bar">
+            <ul>
+                <li><a href="#overview" class="navigation_bar_item">OVERVIEW</a></li>
+                <li><a href="#education" class="navigation_bar_item">EDUCATION</a></li>
+                <li><a href="#experience" class="navigation_bar_item">EXPERIENCE</a></li>
+                <li><a href="#contact" class="navigation_bar_item">CONTACT</a></li>
+            </ul>
+        </div>
+    </body>
 </html>
