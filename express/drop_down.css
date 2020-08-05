@@ -36,3 +36,4 @@ li.dropdown {
 .dropdown:hover .dropdown-content {
   display: block;
 }
+*.fa-bars{color:white;}
