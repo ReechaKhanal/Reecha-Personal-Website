@@ -6,25 +6,90 @@
     <head>
         <link rel="stylesheet" href = "main.css">
         <link rel="stylesheet" href = "drop_down.css">
+        <script type="text/javascript" src="myFunction.js"></script>
     </head>
 
     <body>
         <!-- Top Navigation Bar -->
-        <div class="top-navigation-bar">
+        <div id = "navbar" class="top-navigation-bar">
             <ul class = "top-navigation">
-                <li><a href="#overview" class="active">OVERVIEW</a></li>
-                <li><a href="#education">EDUCATION</a></li>
-                <li><a href="#experience">EXPERIENCE</a></li>
-                <li><a href="#contact">CONTACT</a></li>
-                <li style = "float:right" class="dropdown">
-                    <a href="javascript:void(0)" class="dropbtn" style="font-size: 44px;"><i class="fa fa-bars" style = "color:green"></i></a>
-                    <div class="dropdown-content">
-                        <a href="#">EDUCATION</a>
-                        <a href="#">PROFESSIONAL EXPERIENCE</a>
-                        <a href="#">CONTACT</a>
+                <li><a href="" class="active">OVERVIEW</a></li>
+                <li><a href="#education" onclick="myFunction1()">EDUCATION</a></li>
+                <li><a href="#experience" onclick="myFunction1()">EXPERIENCE</a></li>
+                <li><a href="#contact" onclick="myFunction2()">CONTACT</a></li>
+                <!-- Hamburger button on the top Navigation Bar and its dropdown list-->
+                <li style = "float:right;" class="drop-down">
+                    <span class = "hamburger-icon" href="javascript:void(0)">
+                        <img src = "Hamburger_icon1.PNG" width= "45" height = "40" alt = " ">
+                    </span>
+                    <div id = "navDemo" class="dropdown-content">
+                        <a href="#education" class = "option" onclick="myFunction()">EDUCATION</a>
+                        <a href="#experience" class = "option" onclick="myFunction1()">EXPERIENCE</a>
+                        <a href="#contact" class = "option" onclick="myFunction2()">CONTACT</a>
                     </div>
                 </li>
+                
             </ul>
-        </div>       
+        </div>
+
+<!-- Page Content -->   
+
+    <!-- Initial Introduction Section -->
+        <div id="introduction" class = "introduction-content">
+
+    <!--Education Section -->
+        
+        <div id = "education" class="education-content">
+            <h2 id="education-header">EDUCATION</h2>
+            <p>Bachelor's of Science | University of New Orleans (UNO)</p>
+            <p>Major: Computer Science</p>
+            <p>Minor: Electrical Engineering</p>
+            <p>Magna Cum Laude</p>
+            <p>University High Honors and Honors in Computer Science</p>
+            <p>UNO Scholarship for Women in Computer Science, 2018
+            <p>College of Sciences Undergraduate Reaserch Program (COSURP), 2017</p>
+            <p>Privateer Undergraduate Research and Scholarly UNO Experience (P.U.R.S.U.E), 2016</p>
+            <p>Homer L. Hitt Presedential Award, Undergraduate Full Ride Award, 2015</p>
+        </div>
+
+    <!--Experience Section -->
+        
+        <div id ="experience" class="experience-content ">
+            <h2 id="experience-header">EXPERIENCE</h2>
+            <ul class = "experience-list">
+                <li><strong>Software Engineer, DXC Technology Services, Roseville, CA</strong>
+                    <br><em>Maintained Health and Welfare System for the State of California.</em>
+                <li><strong>Data Scientist, DXC Technology Services, New Orleans, LA</strong>
+                    <br><em>Engineered and deployed an end-to-end Business Intelligence reporting platform for DXC's ($21B Revenue) executive leadership team.</em>
+                    <br><em>Prioritized Delivery Center Functions across 300+ employees and 15M+ in operating expenses.</em>
+                <li><strong>Research Assistant, Machine Learning Lab (BMLL), University of New Orleans,New Orleans, LA</strong>
+                    <br><em>Engineered and published a computation tool, AIRBP, to predict RNA binding proteins using machine learning methods.</em>
+                    <br><em>Achieved 3.26\%, 6.75\% and 9.53\% improvement in terms of accuracy, F1-score and MCC respectively.</em>
+                    <br><em> <strong>Published Tool Link:</strong> https://bmll.cs.uno.edu/add under “AIRBP”.</em>
+        </div>
+    <!--Contact Section -->
+        <div id = "contact" class="contact-content ">
+            <h2 id="contact-header">CONTACT</h2>
+            LinkedIn: https://www.linkedin.com/in/reecha-khanal/
+            Email: reecha.khanal@gmail.com
+        </div>
+    <p>Go to the
+      <a href="#Lorem_Ipsum">top</a>.
+    </p>
+
+    <script>
+        window.onscroll = function() {myScrollFunction()};
+        var navbar = document.getElementById("navbar");
+        var sticky = navbar.offsetTop;
+
+        function myScrollFunction() {
+            if (window.pageYOffset >= sticky) {
+                navbar.classList.add("sticky")
+            } else {
+                navbar.classList.remove("sticky");
+            }
+        }
+    </script>
+
     </body>
 </html>
