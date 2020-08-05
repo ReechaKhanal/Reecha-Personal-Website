@@ -1,7 +1,6 @@
 body {margin: 0;}
 
 ul.top-navigation {
-  position: fixed;
   list-style-type: none;
   margin: 0;
   padding: 0;
@@ -25,3 +24,8 @@ ul.top-navigation li a:hover:not(.active) {background-color: #111;}
 ul.top-navigation li a.active {background-color: #4CAF50;}
 
 ul.topnav li.right {float: right;}
+
+@media screen and (max-width: 600px) {
+  ul.topnav li.right, 
+  ul.topnav li {float: none;}
+}
