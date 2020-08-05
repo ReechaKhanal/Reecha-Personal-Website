@@ -19,13 +19,14 @@ ul.top-navigation li a {
 }
 
 /* Change the link color to #111 (black) on hover */
-ul.top-navigation li a:hover:not(.active) {background-color: #111;}
+ul.top-navigation li a:hover:not(.dropbtn) {background-color: #111;}
 
-ul.top-navigation li a.active {background-color: #4CAF50;}
+ul.top-navigation li a.dropbtn {background-color: #4CAF50;}
 
-ul.topnav li.dropdown {float: right;}
+/* ul.topnav li.dropdown {float: right;}
 
 @media screen and (max-width: 600px) {
   ul.topnav li.dropdown, 
   ul.topnav li {float: none;}
 }
+*/
