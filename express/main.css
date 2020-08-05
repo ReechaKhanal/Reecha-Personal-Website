@@ -26,6 +26,6 @@ ul.top-navigation li a.active {background-color: #4CAF50;}
 ul.topnav li.dropdown {float: right;}
 
 @media screen and (max-width: 600px) {
-  ul.topnav li.right, 
+  ul.topnav li.dropdown, 
   ul.topnav li {float: none;}
 }
