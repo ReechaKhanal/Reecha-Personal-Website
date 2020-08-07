@@ -16,9 +16,9 @@ ul.top-navigation li a {
 	float:left;
 	display: inline-block; /*makes the list item a block, adds padding above and below*/
 	color:white; /*text color - white*/
-  	text-align: center; /*centrally aligned text*/
-  	padding: 14px 16px; /*addes padding to left and right of the text*/
-  	text-decoration: none;/*Removes the underline*/
+  text-align: center; /*centrally aligned text*/
+  padding: 14px 16px; /*addes padding to left and right of the text*/
+  text-decoration: none;/*Removes the underline*/
 }
 
 /*Change the link color to black on hover for everything except the active class*/
