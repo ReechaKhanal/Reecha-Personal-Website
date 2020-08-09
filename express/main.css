@@ -2,6 +2,7 @@ body {margin: 0;}
 
 .top-navigation-bar{
 	top:0;
+  opacity: 1;
 }
 
 ul.top-navigation {
