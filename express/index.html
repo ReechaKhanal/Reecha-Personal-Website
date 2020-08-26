@@ -18,8 +18,8 @@
         <div id = "navbar" class="top-navigation-bar">
             <ul class = "top-navigation">
                 <li><a href="" class="active"><strong>OVERVIEW</strong></a></li>
-                <li><a href="#education" onclick="myFunction1()"><strong>EDUCATION</strong></a></li>
                 <li><a href="#experience" onclick="myFunction1()"><strong>EXPERIENCE</strong></a></li>
+                <li><a href="#education" onclick="myFunction1()"><strong>EDUCATION</strong></a></li>
                 <li><a href="#contact" onclick="myFunction2()"><strong>CONTACT</strong></a></li>
                 <!-- Hamburger button on the top Navigation Bar and its dropdown list-->
                 <li style = "float:right;" class="drop-down">
@@ -27,8 +27,8 @@
                         <img src = "Hamburger_icon1.PNG" width= "45" height = "40" alt = " ">
                     </span>
                     <div id = "navDemo" class="dropdown-content">
-                        <a href="#education" class = "option" onclick="myFunction()">EDUCATION</a>
                         <a href="#experience" class = "option" onclick="myFunction1()">EXPERIENCE</a>
+                        <a href="#education" class = "option" onclick="myFunction()">EDUCATION</a>
                         <a href="#contact" class = "option" onclick="myFunction2()">CONTACT</a>
                     </div>
                 </li>
@@ -41,10 +41,10 @@
     <!-- Initial Introduction Section -->
     <div class = "Intro">
     <div id="introduction" class = "introduction-content">
-        <img src = "background.jpg", width="100%" height="650">
+        <img src = "background.jpg", width="100%" height="700">
         <div class = "intro_card">
             <br><em>
-            <h2>WELCOME</h2>
+            <h2>WELCOME !!</h2>
             <br><em>
         </div>
         <div class = "intro_card1">
@@ -52,13 +52,109 @@
             <h2> Looking to know more about Reecha ? </h2>
             <br><em>
             <h2> I can help! </h2>
+
+            <a href="#experience">
+  				<span></span>
+  				<img src = "down_arrow.PNG" width= "40" height = "20" alt = " ">
+	  		</a>
         </div>
+  	</div>
     </div>
-    </div>
+
+    
+
+    <!--Experience Section -->    
+        <div id ="experience" class="experience-content ">
+        	<h2><br><em></h2>
+            <h2 id="experience-header" style = "text-align:center"> PROFESSIONAL EXPERIENCE</h2>
+            <div class = "myCardSlides1">
+                <div class= "myCardSlides">
+                    <br><em>
+                    <br><em>
+                    <br><em>
+                    <strong>Software Engineer</strong>
+                    <br><em>
+                    <br><em> DXC Technology Services
+                    <br><em> Roseville, CA
+                    <br><em>
+                    <br><em> June 2020 - Present
+                    <br><em>
+                    <br><em>Maintained Health and Welfare System for the State of California.</em>
+                    <br><em>
+                    <br><em>
+                    <br><em>
+                    <br><em>
+                    <br>
+                </div>
+                <div class = "myCardSlides">
+                    <br><em>
+                    <strong>Data Scientist</strong>
+                    <br><em>
+                    <br><em> DXC Technology Services
+                    <br><em> New Orleans, LA
+                    <br><em>
+                    <br><em> June 2019 - June 2020
+                    <br><em>
+                    <br><em>Engineered and deployed an end-to-end Business Intelligence reporting platform for DXC's ($21B Revenue) executive leadership team.
+                    <br><em>
+                    <br><em>
+                    <br><em>Prioritized Delivery Center Functions across 300+ employees and 15M+ in operating expenses.</em>
+                    <br><em>
+                    <br><em>
+                    <br><em>
+                    
+                </div>
+                <div class = "myCardSlides">
+                    <br><em>
+                    <strong>Research Assistant</strong>
+                    <br><em>
+                    <br><em>Machine Learning Lab (BMLL)University of New Orleans
+                    <br><em>New Orleans, LA</strong>
+                    <br><em>
+                    <br><em>Engineered and published a computation tool, AIRBP, to predict RNA binding proteins using machine learning methods.
+                    <br><em>
+                    <br><em>Achieved 3.26%, 6.75% and 9.53% improvement in terms of accuracy, F1-score and MCC respectively.
+                    <br><em>
+                    <br><em> <strong>Published Tool Link:</strong> https://bmll.cs.uno.edu/add under “AIRBP”.</em>
+                    <br><em>
+                    <br><em>
+                </div>
+                <div class = "myCardSlides">
+                    <br><em>
+                    <strong>Research Assistant</strong>
+                    <br><em>
+                    <br><em>Software Engineering Lab, University of New Orleans
+                    <br><em>
+                    <br><em>New Orleans, LA</strong>
+                    <br><em>
+                    <br><em>Developed an user interactive toolkit, Auto-LaTeX, as an enhancement to the popular LaTeX software.
+                    <br><em>
+                    <br><em>Made conversion between abbreviated and elaborated public venues in .bib files simpler.
+                    <br><em>
+                    <br><em> <strong>Github Link:</strong> https://github.com/ReechaKhanal/Auto-LaTex-Toolkit</em>
+                    <br><em>
+                    <br><em>
+                </div>
+            <br><em>
+            <br>
+            <!-- Next and previous buttons -->
+            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+            <a class="next" onclick="plusSlides(1)">&#10095;</a>
+            <br>
+        </div>
+        <!-- The dots/circles -->
+        <div style="text-align:center">
+            <span class="dot" onclick="currentSlide(1)"></span>
+            <span class="dot" onclick="currentSlide(2)"></span>
+            <span class="dot" onclick="currentSlide(3)"></span>
+            <span class="dot" onclick="currentSlide(4)"></span>
+        </div>
+        </div>
     <!--Education Section -->
     <!-- NOTE FOR FUTURE: Timeline looks out of place, needs to be more managed -->
         
         <div id = "education" class="education-content">
+        	<h2><br></h2>
             <h2 id="education-header" style = "text-align:center">EDUCATION</h2>
 
             <p style = "text-align:center"> <strong>Bachelor's of Science | University of New Orleans (UNO)</strong></p>
@@ -66,7 +162,9 @@
             <div class="timeline">
                 <div class="container left">
                     <div class="content_timeline">
-                        <h2 style = "text-align:center">2015-2016</h2>
+                    	<div class = card_year>
+                    		<h2 style = "text-align:center">2015-2016</h2>
+                    	</div>
                         <p><strong>Started Major in Computer Science at UNO</strong></p>
                         <p><strong>Enrolled as an Honors Student</strong></p>
                         <p><strong>Awarded Full Ride Undergradute Award</strong></p>
@@ -99,83 +197,7 @@
             </div>
         </div>
 
-    <!--Experience Section -->
-        
-        <div id ="experience" class="experience-content ">
-            <br><em>
-            <h2 id="experience-header" style = "text-align:center"> PROFESSIONAL EXPERIENCE</h2>
-            <div class = "myCardSlides1">
-                <div class= "myCardSlides">
-                    <br><em>
-                    <strong>Software Engineer</strong>
-                    <br><em> DXC Technology Services
-                    <br><em> Roseville, CA
-                    <br><em>
-                    <br><em> June 2020 - Present
-                    <br><em>
-                    <br><em>Maintained Health and Welfare System for the State of California.</em>
-                    <br><em>
-                    <br><em>
-                    <br>
-                </div>
-                <div class = "myCardSlides">
-                    <br><em>
-                    <strong>Data Scientist</strong>
-                    <br><em> DXC Technology Services
-                    <br><em> New Orleans, LA
-                    <br><em>
-                    <br><em> June 2019 - June 2020
-                    <br><em>
-
-                    <br><em>Engineered and deployed an end-to-end Business Intelligence reporting platform for DXC's ($21B Revenue) executive leadership team.
-                    <br><em>
-                    <br><em>
-                    <br><em>Prioritized Delivery Center Functions across 300+ employees and 15M+ in operating expenses.</em>
-                    <br><em>
-                    <br><em>
-                </div>
-                <div class = "myCardSlides">
-                    <br><em>
-                    <strong>Research Assistant</strong><br><em>Machine Learning Lab (BMLL)University of New Orleans
-                    <br><em>New Orleans, LA</strong>
-                    <br><em>
-                    <br><em>Engineered and published a computation tool, AIRBP, to predict RNA binding proteins using machine learning methods.
-                    <br><em>
-                    <br><em>Achieved 3.26%, 6.75% and 9.53% improvement in terms of accuracy, F1-score and MCC respectively.
-                    <br><em>
-                    <br><em> <strong>Published Tool Link:</strong> https://bmll.cs.uno.edu/add under “AIRBP”.</em>
-                    <br><em>
-                    <br><em>
-                </div>
-                <div class = "myCardSlides">
-                    <br><em>
-                    <strong>Research Assistant</strong><br><em>Software Engineering Lab, University of New Orleans
-                    <br><em>New Orleans, LA</strong>
-                    <br><em>
-                    <br><em>Developed an user interactive toolkit, Auto-LaTeX, as an enhancement to the popular LaTeX software.
-                    <br><em>
-                    <br><em>Made conversion between abbreviated and elaborated public venues in .bib files simpler.
-                    <br><em>
-                    <br><em> <strong>Github Link:</strong> https://github.com/ReechaKhanal/Auto-LaTex-Toolkit</em>
-                    <br><em>
-                    <br><em>
-                </div>
-            <br><em>
-            <br>
-            <!-- Next and previous buttons -->
-            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-            <a class="next" onclick="plusSlides(1)">&#10095;</a>
-            <br>
-        </div>
-        <!-- The dots/circles -->
-        <div style="text-align:center">
-            <span class="dot" onclick="currentSlide(1)"></span>
-            <span class="dot" onclick="currentSlide(2)"></span>
-            <span class="dot" onclick="currentSlide(3)"></span>
-            <span class="dot" onclick="currentSlide(4)"></span>
-        </div>
-        </div>
-    <!--Contact Section -->
+     <!--Contact Section -->
     <!-- NOTE FOR FUTURE: need to few more design in this section -->
         <div id = "contact" class="contact-content ">
             <h2 id="contact-header" style = "text-align:center">CONTACT</h2>
@@ -191,12 +213,12 @@
                 <img src = "gmailLogo.jpg" width= "35" height = "30" >
             </a>
             <br><em>
-            </div>
+            <p>Go to the
+      			<a href="#">top</a>.
+    		</p>
         </div>
-    <p>Go to the
-      <a href="#">top</a>.
-    </p>
-
+    </div>
+   
     <script>
         window.onscroll = function() {myScrollFunction()};
         var navbar = document.getElementById("navbar");
