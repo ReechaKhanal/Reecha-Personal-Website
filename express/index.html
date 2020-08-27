@@ -9,6 +9,7 @@
         <link rel="stylesheet" href = "background.css">
         <link rel="stylesheet" href = "slideshow.css">
         <link rel="stylesheet" href = "education_background.css">
+        <link rel="stylesheet" href = "hamburger.css">
         <script type="text/javascript" src="myFunction.js"></script>
         <script type="text/javascript" src="card-slideshow.js"></script>
     </head>
@@ -23,9 +24,13 @@
                 <li><a href="#contact" onclick="myFunction2()"><strong>CONTACT</strong></a></li>
                 <!-- Hamburger button on the top Navigation Bar and its dropdown list-->
                 <li style = "float:right;" class="drop-down">
-                    <span class = "hamburger-icon" href="javascript:void(0)">
-                        <img src = "Hamburger_icon1.PNG" width= "45" height = "40" alt = " ">
-                    </span>
+                	
+                	<div class="hamburger-test" onclick="myHamburgerClick(this)">
+  						<div class="bar1"></div>
+  						<div class="bar2"></div>
+  						<div class="bar3"></div>
+					</div>
+
                     <div id = "navDemo" class="dropdown-content">
                         <a href="#experience" class = "option" onclick="myFunction1()">EXPERIENCE</a>
                         <a href="#education" class = "option" onclick="myFunction()">EDUCATION</a>
@@ -254,9 +259,13 @@
             for (i = 0; i < dots.length; i++) {
             dots[i].className = dots[i].className.replace(" active", "");
             }
-  slides[slideIndex-1].style.display = "block";
-  dots[slideIndex-1].className += " active";
-}
+  			slides[slideIndex-1].style.display = "block";
+  			dots[slideIndex-1].className += " active";
+		}
+
+		function myHamburgerClick(x){
+			x.classList.toggle("change")
+		}
     </script>
 
     </body>

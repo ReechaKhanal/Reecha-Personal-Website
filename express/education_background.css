@@ -100,7 +100,8 @@
 /* The actual content */
 .content_timeline {
   border-radius: 15px;
-  padding: 20px 30px;
+  padding: 10px 10px;
+  width: auto;
   background-color: #ffffff;
   position: relative;
   color: black;

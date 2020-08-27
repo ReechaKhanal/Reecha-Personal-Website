@@ -1,17 +1,8 @@
-.hamburger-icon {
-  background-color: #3333;
-  color: white;
-  padding: 16px;
-  font-size: 16px;
-  border: none;
-  cursor: pointer;
-  }
-
 .drop-down{
   display: block;
 }
 
-.dropdown:hover .hamburger-icon{
+.dropdown:hover .hamburger-test{
   background-color: green;
 }
 
