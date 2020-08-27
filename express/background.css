@@ -1,17 +1,23 @@
+
 .introduction-content {
-  	background-color: #333; /*charcoal color for background*/
+  	background-color: #333; 
   	opacity:1;
   	text-decoration-color: white;
     color: #f2f2f2;
     text-align: center;
+    margin:0;
 }
-
 
 .experience-content {
   	background-color: #333; /*the dark charcoal color for background*/
   	opacity:1;
   	text-decoration-color: white;
   	color: #f2f2f2;
+    margin:0;
+}
+
+.contact-content{
+  margin:0;
 }
 
 .myCardSlides{

@@ -1,5 +1,7 @@
 body {margin: 0;}
-
+h1, h2, p {
+    margin: 0;
+}
 .top-navigation-bar{
 	top:0;
   opacity: 1;
