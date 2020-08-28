@@ -1,6 +1,12 @@
-body {margin: 0;}
-h1, h2, p {
+body {
+  margin: 0;
+  font-style: "Open Sans";
+}
+h1, h2{
     margin: 0;
+}
+p{
+  margin: 1;
 }
 .top-navigation-bar{
 	top:0;
