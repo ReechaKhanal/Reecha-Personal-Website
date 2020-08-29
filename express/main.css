@@ -19,7 +19,7 @@ ul.top-navigation {
   	margin: 0; /*removes the above margin*/
   	padding: 0; /*removing padding from left and right*/
   	overflow: hidden; /*Turned everything noice*/
-  	background-color: #333; /*the dark charcoal color for background*/
+    background-color: #1c313a /* Background color of the navigation bar*/
 }
 
 ul.top-navigation li a {
@@ -31,11 +31,7 @@ ul.top-navigation li a {
   text-decoration: none;/*Removes the underline*/
 }
 
-/*Change the link color to black on hover for everything except the active class*/
-ul.top-navigation li a:hover:not(.active) {background-color: #111;}
-
-/*Make the "Overview tab active" initially and of color green*/
-ul.top-navigation li a.active {background-color: #4CAF50;}
+ul.top-navigation li a:hover {background-color: #111;}
 
 .sticky {
   position: fixed;

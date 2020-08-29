@@ -12,7 +12,7 @@
 .dropdown-content{
   display: none; /*hides the dropdown content*/
   position: absolute;
-  background-color: #333;  /* charcoal background*/
+  background-color: #1c313a ;  /* charcoal background*/
   min-width: 16px;
   max-width: 130px;
   box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
