@@ -8,6 +8,7 @@ h1, h2{
 p{
   margin: 1;
 }
+
 .top-navigation-bar{
 	top:0;
   opacity: 1;
@@ -37,4 +38,11 @@ ul.top-navigation li a:hover {background-color: #111;}
   position: fixed;
   top: 0;
   width: 100%;
+}
+
+/* Add responsiveness - display the form controls vertically instead of horizontally on screens that are less than 800px wide */
+@media (max-width: 800px) {
+    .navigation-list {
+        display: none;
+    }
 }

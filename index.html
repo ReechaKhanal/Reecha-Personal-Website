@@ -4,214 +4,268 @@
 
 <title>Reecha Khanal</title>
 <meta charset="UTF-8">
-
-<!--
-font-weight: 400; //normal
-font-weight: 500; //medium
-font-weight: 700; //bold
--->
+<meta name="viewport" content="width=device-width, initial-scale=1">
     
-    <head>
-        <link rel="stylesheet" href = "main.css">
-        <link rel="stylesheet" href = "drop_down.css">
-        <link rel="stylesheet" href = "background.css">
-        <link rel="stylesheet" href = "slideshow.css">
-        <link rel="stylesheet" href = "education_background.css">
-        <link rel="stylesheet" href = "hamburger.css">
-        <script type="text/javascript" src="myFunction.js"></script>
-        <script type="text/javascript" src="card-slideshow.js"></script>
-    </head>
+<head>
+    <link rel="stylesheet" href = "main.css">
+    <link rel="stylesheet" href = "introduction_content.css">
+    <link rel="stylesheet" href = "experience_content.css">
+    <link rel="stylesheet" href = "project_section.css">
+    <link rel="stylesheet" href = "drop_down.css">
+    <link rel="stylesheet" href = "background.css">
+    <link rel="stylesheet" href = "education_background.css">
+    <link rel="stylesheet" href = "project_section.css">    
+    <link rel="stylesheet" href = "hamburger.css">
+    <script type="text/javascript" src="myFunction.js"></script>
+    <script type="text/javascript" src="card-slideshow.js"></script>
+</head>
 
-    <body>
-        <!-- Top Navigation Bar -->
-        <div id = "navbar" class="top-navigation-bar">
-            <ul class = "top-navigation"  style = "font-weight: 700;font-size: 17px">
-                <li><a href=""><strong>OVERVIEW</strong></a></li>
-                <li><a href="#experience" onclick="myFunction1()"><strong>EXPERIENCE</strong></a></li>
-                <li><a href="#education" onclick="myFunction1()"><strong>EDUCATION</strong></a></li>
-                <li><a href="#contact" onclick="myFunction2()"><strong>CONTACT</strong></a></li>
-                <!-- Hamburger button on the top Navigation Bar and its dropdown list-->
-                <li style = "float:right;" class="drop-down">
-                	
-                	<div class="hamburger-test" onclick="myHamburgerClick(this)">
-  						<div class="bar1"></div>
-  						<div class="bar2"></div>
-  						<div class="bar3"></div>
-					</div>
-
-                    <div id = "navDemo" class="dropdown-content">
-                        <a href="#experience" class = "option" onclick="myFunction1()">EXPERIENCE</a>
-                        <a href="#education" class = "option" onclick="myFunction()">EDUCATION</a>
-                        <a href="#contact" class = "option" onclick="myFunction2()">CONTACT</a>
-                    </div>
-                </li>
+<body>
+    <!-- Top Navigation Bar -->
+    <div id = "navbar" class="top-navigation-bar">
+        <ul class = "top-navigation"  style = "font-weight: 700;font-size: 17px">
+            <div class = "navigation-list">
+            <li><a href=""><strong>OVERVIEW</strong></a></li>
+            <li><a href="#experience" onclick="myFunction1()"><strong>EXPERIENCE</strong></a></li>
+            <li><a href="#project" onclick="myFunction1()"><strong>PROJECTS</strong></a></li>
+            <li><a href="#education" onclick="myFunction1()"><strong>EDUCATION</strong></a></li>
+            <li><a href="#contact" onclick="myFunction2()"><strong>CONTACT</strong></a></li>
+            </div>
+            <!-- Hamburger button on the top Navigation Bar and its dropdown list-->
+            <li style = "float:right;" class="drop-down">            	
+                <div class="hamburger-test" onclick="myHamburgerClick(this)">
+  				    <div class="bar1"></div>
+  				    <div class="bar2"></div>
+  				    <div class="bar3"></div>
+			    </div>
+                <div id = "navDemo" class="dropdown-content">
+                    <a href="" class = "option">OVERVIEW</a>
+                    <a href="#experience" class = "option" onclick="myFunction1()">EXPERIENCE</a>
+                    <a href="#project" class = "option">PROJECTS</a>
+                    <a href="#education" class = "option" onclick="myFunction()">EDUCATION</a>
+                    <a href="#contact" class = "option" onclick="myFunction2()">CONTACT</a>
+                </div>
+            </li>
                 
-            </ul>
-        </div>
+        </ul>
+    </div>
+    <!-- End Navigation Bar -->
 
-<!-- Page Content -->   
+    <!-- Page Content -->   
     <!-- Initial Introduction Section -->
-    <!-- <div class = "Intro"> -->
     <div id="introduction" class = "introduction-content">
-        <img src = "background.jpg", width="100%" height="700">
+        <!-- <img src = "background.jpg", width="100%" height="700"> -->
         <div class = "intro_card1" >
-        	<br><em>
-            <h2> Looking to know more about Reecha ? </h2>
-            <br><em>
-            <h2> I can help! </h2>
-            <h2><br><em></em></h2>
-            <a href="#experience">
-            	<!--
-  				<span></span>
-  				<img src = "down_arrow.PNG" width= "40" height = "20" alt = " "> 
-  				-->
-  				<p> <i class="arrow down"></i></p>
-	  		</a>
+            <img src = "owl_image.png"; width=10%; height=90%; style="float: left;">
+        	<h2 style="font-style: normal; font-size: 20px;"> Hi, I am Reecha's Portfolio.</h2>
+        </div>
+        <br/><br/><br/>
+        <div class = "intro_card2">
+
+            <div class = "ask-question" >
+                <h1 style="font-size:20px;"> I can walk you through Reecha's Experience, Interests and Education. Scroll below to get started. </h1>
+                <br/><br/>
+            </div>
         </div>
   	</div>
-  	<div id ="experience" class="experience-content ">
-      	<h2><br><em></h2>
-      	<br><em>
-      	<br><em>
-        <h2 id="experience-header" style = "text-align:center;font-size:30px"> PROFESSIONAL EXPERIENCE</h2>
+    <!-- End Introduction Section-->
+    
+    <!-- Professional Experience Section -->
+  	<div id ="experience" class="experience-content" style="background-color:lightblue; padding-top: 0%; top: 2px; padding-bottom: 50px;">
+        <h2 id="experience-header" style = "text-align:center;font-size:30px;font-style: normal;color: black;background-color: cornsilk; padding: 20px;"> PROFESSIONAL EXPERIENCE</h2>
         <br><em>
         <br><em>
-        <div class = "myCardSlides1">
-            <div class= "myCardSlides">
-                <br><em>
-		        <br><em>
-		        <br><em>
-		        <strong>Software Engineer</strong>
-		        <br><em>
-		        <br><em> DXC Technology Services
-		        <br><em> Roseville, CA
-		        <br><em>
-                <br><em> June 2020 - Present
-                <br><em>
-                <br><em>Maintained Health and Welfare System for the State of California.</em>
-                <br><em>
-                <br><em>
-                <br><em>
-                <br><em>
-                <br>
-            </div>
-            <div class = "myCardSlides">
-                <br><em>
-                <strong>Data Scientist</strong>
-                <br><em>
-                <br><em> DXC Technology Services
-                <br><em> New Orleans, LA
-                <br><em>
-                <br><em> June 2019 - June 2020
-                <br><em>
-                <br><em>Engineered and deployed an end-to-end Business Intelligence reporting platform for DXC's ($21B Revenue) executive leadership team.
-                <br><em>
-                <br><em>
-                <br><em>Prioritized Delivery Center Functions across 300+ employees and 15M+ in operating expenses.</em>
-                <br><em>
-                <br><em>
-                <br><em>
-            </div>
-            <div class = "myCardSlides">
-                    <br><em>
-                    <strong>Research Assistant</strong>
-                    <br><em>
-                    <br><em>Machine Learning Lab (BMLL)University of New Orleans
-                    <br><em>New Orleans, LA</strong>
-                    <br><em>
-                    <br><em>Engineered and published a computation tool, AIRBP, to predict RNA binding proteins using machine learning methods.
-                    <br><em>
-                    <br><em>Achieved 3.26%, 6.75% and 9.53% improvement in terms of accuracy, F1-score and MCC respectively.
-                    <br><em>
-                    <br><em> <strong>Published Tool Link:</strong> https://bmll.cs.uno.edu/add under “AIRBP”.</em>
-                    <br><em>
-                    <br><em>
+            <div class="timeline">
+                <div class="container left">
+                    <div class="content_timeline">
+                    	<h3 style = "text-align:center;background-color:darkgray;color:black;padding:10px;font-style: normal;text-align: left;font-size: 16px;">
+                            <strong>Software Engineer</strong>
+                            <span style="float: right; font-style: normal; font-size: 16px;">
+                                June 2020 - Present
+                            </span>
+                        </h3>
+                        <p style =font-size:16px"><strong>Gainwell Technologies LLC | Roseville, California</strong></p>
+                        <p>
+                            <li>Implemented federal requirements for the Health and Welfare Application of California, CalWIN.</li>
+                            <br/>
+                            <li>Used Java, JavaScript, SQL, SVN using Oracle's Java ADF framework.</li>
+                        </p>
+                    </div>
                 </div>
-                <div class = "myCardSlides">
-                    <br><em>
-                    <strong>Research Assistant</strong>
-                    <br><em>
-                    <br><em>Software Engineering Lab, University of New Orleans
-                    <br><em>
-                    <br><em>New Orleans, LA</strong>
-                    <br><em>
-                    <br><em>Developed an user interactive toolkit, Auto-LaTeX, as an enhancement to the popular LaTeX software.
-                    <br><em>
-                    <br><em>Made conversion between abbreviated and elaborated public venues in .bib files simpler.
-                    <br><em>
-                    <br><em> <strong>Github Link:</strong> https://github.com/ReechaKhanal/Auto-LaTex-Toolkit</em>
-                    <br><em>
-                    <br><em>
+                <div class="container right">
+                    <div class="content_timeline">
+                        <h3 style = "text-align:center;background-color:darkgray;color:black;padding:10px;font-style: normal;text-align: left;font-size: 16px;"><strong>Data Scientist</strong>
+                            <span style="float: right; font-style: normal; font-size: 16px;">
+                                June 2019 - June 2020
+                            </span>
+                        </h3>
+                        <p style ="font-size:16px"><strong>DXC Technology Services | New Orleans, Louisiana</strong></p>
+                        <p>
+                            <li>Engineered and deployed a Business Intelligence reporting platform for DXC's executive leadership team.</li>
+                            <br/>
+                            <li>Used Python, Powershell, Azure Data Factory, Tableau, PowerBI, and other Data tools.</li>
+                        </p>
+                    </div>
                 </div>
-            <br><em>
-            <br>
+                <div class="container left">
+                    <div class="content_timeline">
+                    	<h3 style = "text-align:center;background-color:darkgray;color:black;padding:10px;font-style: normal;text-align: left;font-size: 16px;">
+                            Research Assitant
+                            <span style="float: right; font-style: normal; font-size: 16px;">
+                                Dec 2017 - May 2019
+                            </span>
+                        </h3>
+                        <p style ="font-size:16px"><strong>Machine Learning Lab (BMLL) | University of New Orleans</strong></p>
+                        <p>
+                            <li>Engineered and published a computation tool, AIRBP, to predict RNA binding proteins using machine learning approaches.</li>
+                            <br/>
+                            <li>Achieved 3.26\%, 6.75\% and 9.53\% improvement in terms of accuracy, F1-score and MCC respectively.</li>
+                        </p>
+                    </div>
+                </div>
+                <div class="container right">
+                    <div class="content_timeline">
+                        <h3 style = "text-align:center;background-color:darkgray;color:black;padding:10px;font-style: normal;text-align: left;font-size: 16px;">
+                            Research Assitant
+                            <span style="float: right; font-style: normal; font-size: 16px;">
+                                Jan 2017 - July 2017
+                            </span>
+                        </h3>
+                        <p><strong>Software Engineering Lab, University of New Orleans</strong></p>
+                        <p>
+                            <li>Developed an user interactive toolkit, Auto-LaTeX, as an enhancement to the popular LaTeX software.</li>
+                            <br/>
+                            <li>Made conversion between abbreviated and elaborated public venues in .bib files simpler.</li>
+                        </p>
+                    </div>
+                </div>
+            </div>
+    </div>
+    <!-- End Professional Experience Section -->
+
+    <!-- Begin Project Section -->
+    <div id ="project" class="project-content" style="background-color: #ebb6b6; padding-top: 0%; top: 3px; padding-bottom: 50px;">
+        <h2 id="project-header" style = "text-align:center;font-size:30px;font-style: normal;color: black;background-color: cornsilk; padding: 20px;"> PROJECTS</h2>
+
+        <div class="slideshow-container">
+
+            <!-- Full-width images with number and caption text -->
+            <div class="mySlides">
+                <h2 style="font-style: normal;text-align: center;padding:15px;">Chess Two Player Full Stack Application</h2>
+                <img src="Chess-Application-Screen-Recorded.GIF"; alt="description of gif"; width=90%; height=80%;/> 
+                <p style="font-style: normal;">
+                    <strong>Description:</strong>
+                    <br/><br/>
+                    This is a chess application where any two players can enter a "room" and play chess. The application is 
+                    hosted on heroku.
+                    <br/>
+                </p>
+                <a href = "https://reecha-chess-two-player.herokuapp.com/" target = "_blank" style = "padding: 20px;text-decoration: none;font-style: normal;font-weight: bold;text-align: left;">
+                    Invite a Friend and Play here
+                </a>
+            </div>
+          
+            <div class="mySlides">
+                
+                <h2 style="font-style: normal;text-align: center;padding:15px;">Puja Bell Application</h2>
+                <div style="display: inline;float: left; width: 100%;">
+                    <img src="BellImage.jpeg" width=200px; height=400px;></img>
+                    <img src="Bell_GIF.GIF" width=200px; height=400px; style="padding-left: 10px;"></img>                    
+                </div>
+                <div>
+                <p style="font-style: normal;">
+                    <strong>Description:</strong>
+                    <br/><br/>
+                    This is a React Native based puja Bell Application that rings on shake gesture.
+                    <br/>
+                </p>
+                <a href = "https://www.youtube.com/watch?v=PtLw6I0II68" target = "_blank" style = "padding: 20px;text-decoration: none;font-style: normal;font-weight: bold;text-align: left;">
+                    Watch a recorded Demo video of this application here.
+                </a>
+                <br/>
+                <br/>
+                <a href = "https://github.com/ReechaKhanal/React-Native-Puja-Bell" target = "_blank" style = "padding: 20px;text-decoration: none;font-style: normal;font-weight: bold;text-align: left;">
+                    Click here for the Github Link
+                </a>
+                </div>
+            </div>
+          
+            <div class="mySlides">
+                <h2 style="font-style: normal;text-align: center;padding:15px;">Sorting Visualizer</h2>
+                <img src="Insertion_Sort.gif"; alt="description of gif"; width=90%; height=80%;/> 
+                <p style="font-style: normal;">
+                    <strong>Description:</strong>
+                    <br/><br/>
+                    This is a sorting Visualizer application, that shows how different sorting algorithms work.
+                    <br/>
+                </p>
+                <a href = "https://reechakhanal.github.io/react-sorting-visualizer-web/" target = "_blank" style = "padding: 20px;text-decoration: none;font-style: normal;font-weight: bold;text-align: left;">
+                    Try it Out!
+                </a>
+                <br/>
+                <br/>
+                <a href = "https://github.com/ReechaKhanal/Sorting-Visualizer" target = "_blank" style = "padding: 20px;text-decoration: none;font-style: normal;font-weight: bold;text-align: left;">
+                    Click here for the Github Link
+                </a>
+
+            </div>
+          
             <!-- Next and previous buttons -->
             <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
             <a class="next" onclick="plusSlides(1)">&#10095;</a>
-            <br>
         </div>
+        <br>
+          
         <!-- The dots/circles -->
         <div style="text-align:center">
             <span class="dot" onclick="currentSlide(1)"></span>
             <span class="dot" onclick="currentSlide(2)"></span>
             <span class="dot" onclick="currentSlide(3)"></span>
-            <span class="dot" onclick="currentSlide(4)"></span>
         </div>
-        </div>
+    </div>
+    <!-- End Project Section -->
+
     <!--Education Section -->
-        <div id = "education" class="education-content">
-        	<br><em>
-        	<br><em>
-            <h2 id="education-header" style = "text-align:center;font-size:30px;color:#263238">EDUCATION</h2>
+        <div id ="education" class="education-content" style="background-color: lightblue; padding-top: 0%; top: 3px; padding-bottom: 50px;">
+            <h2 id="education-header" style = "text-align:center;font-size:30px;font-style: normal;color: black;background-color: cornsilk; padding: 20px;"> EDUCATION</h2>
 
-            <p style = "text-align:center;font-size:22px"> <strong>Bachelor's of Science | University of New Orleans (UNO)</strong></p>
-
-            <div class="timeline">
-                <div class="container left">
-                    <div class="content_timeline">
-                    	<h2 style = "text-align:center;background-color:#263238;color:white">2015-2016</h2>
-                        <p style ="background-color:#e6ffff;font-size:16px"><strong>Started Major in Computer Science at UNO</strong></p>
-                        <p style ="background-color:#e6ffff;font-size:16px"><strong>Enrolled as an Honors Student</strong></p>
-                        <p style ="background-color:#e6ffff;font-size:16px"><strong>Awarded Full Ride Undergradute Award</strong></p>
+            <div class="row">
+                <div class="column">
+                    <div class="card">
+                        
+                        <h3 style="font-style: normal;background-color: darkgray; padding:10px;text-align:left;">
+                            <strong>University of New Orleans</strong>
+                            <span style="float: right; font-style: normal; font-size: 16px;">
+                                Aug 2015 - May 2019
+                            </span>
+                        </h3>
+                        
+                        <p><strong>Bachelor's in Computer Science</strong></p>
+                        
+                        <p>
+                            <li>Major: Computer Science</li>
+                            <li>Minor: Electrical Engineering</li>
+                            <li>University High Honors and Honors in Computer Science</li>
+                            <li>Magna Cum Laude</li>
+                            <li>Awarded Research Grant for research in Software Engineering and Machine Learning</li>
+                            <li>Undergradute Full Ride Award</li>
+                        </p>
                     </div>
                 </div>
-                <div class="container right">
-                    <div class="content_timeline">
-                        <h2 style = "text-align:center;background-color:#263238;color:white">2016-2017</h2>
-                        <p style ="background-color:#e6ffff;font-size:16px"><strong>Started Minor in Electrical Engineering</strong></p>
-                        <p style ="background-color:#e6ffff;font-size:16px"><strong>Received Grant to conduct research in Software Engineering</strong></p>
-                    </div>
-                </div>
-                <div class="container left">
-                    <div class="content_timeline">
-                        <h2 style = "text-align:center;background-color:#263238;color:white">2017-2018</h2>
-                        <p style ="background-color:#e6ffff;font-size:16px"><strong>Received Grant to conduct research in Machine Leaning</strong></p>
-                        <p style ="background-color:#e6ffff;font-size:16px"><strong>Received Women in Computer Science Scholarship and Mentorship</strong></p>
-                    </div>
-                </div>
-                <div class="container right">
-                    <div class="content_timeline">
-                        <h2 style = "text-align:center;background-color:#263238;color:white">2018-2019</h2>
-                        <p style ="background-color:#e6ffff;font-size:16px"><strong>Graduated Magna Cum Laude</strong></p>
-                        <p style ="background-color:#e6ffff;font-size:16px"><strong>Received University High Honors and Honors in Computer Science</strong></p>
-                        <p style ="background-color:#e6ffff;font-size:16px"><strong>Major in Computer Science and Minor in Computer Engineering</strong></p>
-
-                    </div>
-                </div>
+                
             </div>
         </div>
 
     <!--Contact Section -->
     <!-- NOTE FOR FUTURE: need to few more design in this section -->
-        <div id = "contact" class="contact-content">
-        	<br><em>
-        	<br><em>
-            <h2 id="contact-header" style = "text-align:center;font-size:30px;color:#263238">CONTACT</h2>
+        <div id ="contact" class="contact-content" style="background-color: #ebb6b6; padding-top: 0%; top: 3px; padding-bottom: 50px;">
+        	<h2 id="contact-header" style = "text-align:center;font-size:30px;font-style: normal;color: black;background-color: cornsilk; padding: 20px;"> CONTACT</h2>
             <br><em>
             <br><em>
             <div class = "contact-links" style = "text-align: center">
-            	<a href = "https://drive.google.com/file/d/1S5R0226-9DNBwxnntP4CkJLViePtgFuh/view?usp=sharing" target = "_blank" style = "font-size:20px;padding: 20px;">
-                RESUME
+            	<a href = "https://drive.google.com/file/d/1S5R0226-9DNBwxnntP4CkJLViePtgFuh/view?usp=sharing" target = "_blank" 
+                style = "font-size:20px;padding: 0px;text-decoration: none;font-style: normal;">
+                Resume
             	</a>
             	<a href = "https://www.linkedin.com/in/reecha-khanal/" target = "_blank" style = "padding: 20px;">
                 	<img src = "LinkedInLogo.png"  width= "35"height = "30"></a>
@@ -220,10 +274,7 @@ font-weight: 700; //bold
             	<a href = "mailto:reecha.khanal@gmail.com" target = "_blank" style = "padding: 20px;">
                 	<img src = "gmailLogo.jpg" width= "35" height = "30"></a>
             	<br><em>
-            	<br><em>
-            	<p style = "text-align:center"style = "padding: 20px;">Go to the
-      				<a href="#">top</a>.
-    			</p>
+            	
         	</div>
     	</div>
    
@@ -255,7 +306,7 @@ font-weight: 700; //bold
 
         function showSlides(n) {
             var i;
-            var slides = document.getElementsByClassName("myCardSlides");
+            var slides = document.getElementsByClassName("mySlides");
             var dots = document.getElementsByClassName("dot");
             if (n > slides.length) {slideIndex = 1}
             if (n < 1) {slideIndex = slides.length}

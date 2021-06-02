@@ -1,0 +1,78 @@
+.introduction-content {
+    opacity:1;
+    background-color: #ebb6b6;
+    text-align: center;
+    margin: auto;
+    top: 0px; 
+    position: relative;
+    margin: auto;
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
+.intro_card1{
+    width: 50%;
+    background-color: rgb(197, 202, 123);
+    position: relative;
+    animation-name: example;
+    animation-duration: 4s;
+    padding: 10px;
+}
+
+@keyframes example {
+    0%   {background-color:rgb(197, 202, 123); left:0px; top:0px;}
+    25%  {background-color:green; left:200px; top:0px;}
+    75%  {background-color:rgb(197, 202, 123); left:0px; top:0px;}
+}
+
+.ask-question{
+    margin: auto;
+    position: relative;
+    width: 40%;
+    background-color: purple;
+    color: white;
+    padding: 15px;
+    border-radius: 25px;
+}
+
+/* Add responsiveness - display the form controls vertically instead of horizontally on screens that are less than 800px wide */
+@media (max-width: 1300px) {
+    .intro_card1 {
+        width: 60%;
+    }
+    .ask-question{
+      width: 60%;
+    }
+}
+
+
+/* Add responsiveness - display the form controls vertically instead of horizontally on screens that are less than 800px wide */
+@media (max-width: 1000px) {
+    .intro_card1 {
+        width: 60%;
+    }
+    .ask-question{
+      width: 70%;
+    }
+}
+
+/* Add responsiveness - display the form controls vertically instead of horizontally on screens that are less than 800px wide */
+@media (max-width: 800px) {
+    .intro_card1 {
+        width: 60%;
+    }
+    .ask-question{
+      width: 80%;
+    }
+}
+
+/* Add responsiveness - display the form controls vertically instead of horizontally on screens that are less than 800px wide */
+@media (max-width: 600px) {
+    .intro_card1 {
+        width: 70%;
+    }
+    .ask-question{
+      width: 90%;
+    }
+}
+}
