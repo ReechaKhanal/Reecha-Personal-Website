@@ -1,6 +1,6 @@
 .introduction-content {
     opacity:1;
-    background-color: #ebb6b6;
+    background-color: #c9cfd6;
     text-align: center;
     margin: auto;
     top: 0px; 
@@ -29,10 +29,11 @@
     margin: auto;
     position: relative;
     width: 40%;
-    background-color: purple;
+    background-color: rgb(197, 202, 123);
     color: white;
     padding: 15px;
     border-radius: 25px;
+    color: black;
 }
 
 /* Add responsiveness - display the form controls vertically instead of horizontally on screens that are less than 800px wide */
