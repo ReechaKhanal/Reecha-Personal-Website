@@ -99,9 +99,9 @@
 .content_timeline {
   border-radius: 15px;
   width: auto;
-  background-color:grey;
+  background-color: #86825d;
   position: relative;
-  color: black;
+  color: wheat;
   padding-bottom: 15px;
   padding-top: 1px;
 }
