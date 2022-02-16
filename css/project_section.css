@@ -10,6 +10,7 @@
   width: 90%;
   text-align: center;
   height: min-content;
+  padding-top: 0px;
 }
 
 /* Hide the images by default */

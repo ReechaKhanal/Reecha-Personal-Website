@@ -24,8 +24,7 @@ ul.top-navigation {
 }
 
 ul.top-navigation li a {
-	float:left;
-	display: inline-block; /*makes the list item a block, adds padding above and below*/
+	float:left; /*makes the list item a block, adds padding above and below*/
 	color:white; /*text color - white*/
   text-align: center; /*centrally aligned text*/
   padding: 14px 16px; /*addes padding to left and right of the text*/
